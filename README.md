@@ -5,15 +5,18 @@ An event bus implements with Agera
 Repository<Event> mEventRepo = AgeraBus.repository(MyEvent.class);
 ```
 ```
-mEventRepo.addUpdatable(()-> {
-        Event event = mEventRepo.get();
-        if (event instanceof MyEvent) {
-            Toast.makeText(this, "我收到消息了", Toast.LENGTH_SHORT).show();
-        }
-});
+Updatable updatable = ()-> {
+                              Event event = mEventRepo.get();
+                              if (event instanceof MyEvent) {
+                                  Toast.makeText(this, "我收到消息了", Toast.LENGTH_SHORT).show();
+                              }
+                      };
 ```
 ```
-mEventRepo.removeUpdatable();
+mEventRepo.addUpdatable(updatable);
+```
+```
+mEventRepo.removeUpdatable(updatable);
 ```
 ```
 AgeraBus.post(new MyEvent());
