@@ -14,6 +14,7 @@ Add dependency using maven:
 add dependency using gradle:
 ```
 compile 'com.cmos:agerabus:1.0.1'
+compile 'com.google.android.agera:agera:1.2.0'
 ```
 #### Sample
 ```
@@ -35,4 +36,8 @@ mEventRepo.removeUpdatable(updatable); // unregister
 ```
 ```
 AgeraBus.post(new MyEvent()); // post an event
+```
+#### Proguard
+```
+U don't need it.
 ```
