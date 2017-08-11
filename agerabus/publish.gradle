@@ -1,7 +1,7 @@
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-version = '1.0.1'
+version = '2.0.0'
 def siteUrl = 'https://github.com/sfcecy7i/AgeraBus'    // 项目主页
 def gitUrl = 'git@github.com:sfcecy7i/AgeraBus.git' // 项目的git地址
 def module_name = 'AgeraBus'    // 项目的名称

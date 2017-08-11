@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cmos.agerabus.R;
-import com.cmos.framework.agera.bus.AgeraBus;
+import com.chinamobile.cmos.agera.bus.ABus;
 
 public class TestActivity extends AppCompatActivity {
     @Override
@@ -16,6 +16,6 @@ public class TestActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        AgeraBus.post(new MainActivity.MyEvent());
+        ABus.INSTANCE.post(1);
     }
 }
